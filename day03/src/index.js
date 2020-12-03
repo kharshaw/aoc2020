@@ -93,7 +93,8 @@ const move = (map, location, travel ) => {
             moves.push(currLoc);
         }
     
-        const hits = moves.filter(m => m.hitTree).length;  //moves.reduce((a, c) => a + Number(c.hitTree ? 1: 0) );
+        const hits = moves.reduce((a, c) => a + Number(c.hitTree ? 1: 0), 0 );
+
         console.log(`hits: ${hits}`);
 
         total = total * hits;
