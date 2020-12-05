@@ -88,6 +88,7 @@ pid valid:   000000001
 pid invalid: 0123456789
 Here are some invalid passports:
 
+```
 eyr:1972 cid:100
 hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
 
