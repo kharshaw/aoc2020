@@ -79,7 +79,6 @@ const load = async (filename) => {
     });
 
     let maxPass = 0;
-
     let mySeat = 0;
 
     for (z = 0; z < maxSeat; z++) {
@@ -91,13 +90,6 @@ const load = async (filename) => {
         }
         
     }
-
-
     console.log(`Max Pass Seat is ${maxPass} and my seat must be ${mySeat}`);
-    
-
-
-
-    
 })();
 
