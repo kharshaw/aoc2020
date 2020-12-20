@@ -54,8 +54,24 @@ const findErrorPart1 = (list, preambleSize) => {
     }
 }
 
-const findErrorPart2 = () => {
-    return false;
+const findErrorPart2 = (list, target) => {
+    
+    for (let i = 0; i < list.length; i++) {
+        let addends = [];
+        let sum = 0;
+
+        for (let j = i; j < list.length; j++) {
+            sum += list[j];
+            addends.push(list[j])
+
+            if (sum > target) {
+                break;
+            } else if (sum === target) {
+                addends.sort((a,b) => a - b);
+                return addends[0] + addends[addends.length - 1];
+            }
+        }
+    }
 
 }
 
@@ -71,7 +87,7 @@ const findErrorPart2 = () => {
     console.log(`part 1: ${result1}`);
 
     //part 2
-    const result2 = findErrorPart2();
+    const result2 = findErrorPart2(data, result1);
     console.log(`part 2: ${result2}`);
 
 })();
